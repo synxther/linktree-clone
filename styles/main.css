@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  /*ira medir a partir da borda assim nunca aumentando a borda da caixa   */
+  box-sizing: border-box;
+  font-family: "Roboto" "Roboto Mono", sans-serif;
+}
+body {
+  background: #e5e5e5;
+}
+.container {
+  /* alinha o conteudo ao centro da caixa */
+  text-align: center;
+  width: 300px;
+  /* auto = o ele proprio faz o calculo das laterais centralizando o item no meio da tela (ignorando cima e baixo =0px) */
+  margin: 60px auto;
+}
+
+img {
+  /* será relativo a caixa q ela está, ou seja 100% da caixa */
+  width: 100%;
+}
+
+img.avatar {
+  padding: 4px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: 4px #4263eb solid;
+}
+
+h1 {
+  margin: 24px 0px 8px 0px;
+  color: #00082f;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: "Roboto";
+}
+
+span {
+  font-weight: 400;
+  font-family: "Roboto Mono";
+  color: rgba(0, 8, 47, 0.8);
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+  margin: 48px 0;
+}
+/* ul li {
+    margin: 20px;
+} */
+ul li a {
+  /* se fosse inline seria apenas uma linha e apenas do tamanho do conteudo, o flex permite que eu mexa com o conteudo dentro da caixa */
+  display: flex;
+  /* alinha ao centro eixoY*/
+  align-items: center;
+  /* justifica ao centro centralizando no eixtoX */
+  justify-content: center;
+  height: 53px;
+  background: #4263eb;
+  transition: background 400ms;
+  border-radius: 6px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  margin-bottom: 16px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+ul li a:hover {
+  background: #364fc7;
+}
+
+footer span {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0, 8, 47, 0.6);
+  transition: 400ms;
+}
+
+footer span:hover {
+  color: #00082f;
+}
