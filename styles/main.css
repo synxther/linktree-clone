@@ -102,9 +102,11 @@ footer span:hover {
 button {
   margin-top: -50px;
   float: right;
+  margin-right: 10px;
   padding: 10px;
   text-decoration: none;
   border: none;
+  font-size: 20px;
   border-radius: 12px;
   background: #4263eb;
   color: white;
