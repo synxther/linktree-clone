@@ -97,3 +97,30 @@ footer span:hover {
 .icon {
     color: white;
 }
+
+
+button {
+  margin-top: -50px;
+  float: right;
+  padding: 10px;
+  text-decoration: none;
+  border: none;
+  border-radius: 12px;
+  background: #4263eb;
+  color: white;
+}
+
+/* dark mode */
+
+body.dark {
+  background-color: #00082F;
+}
+
+body.dark h1 {
+  color: white;
+}
+
+
+body.dark span {
+  color: white;
+}
