@@ -4,12 +4,6 @@
 Um clone do Linktree listando redes de contatos do usuario em questão.
 
 
-
-## Autores
-
-- [@syxnther](https://github.com/synxther)
-
-
 ## Imagens do projeto 
 
 ### Computador
@@ -23,3 +17,8 @@ Um clone do Linktree listando redes de contatos do usuario em questão.
 ## Melhorias
 
 O projeto agora conta com um sistema de tema tanto quanto Light quanto o Dark
+
+
+## Autores
+
+- [@syxnther](https://github.com/synxther)
