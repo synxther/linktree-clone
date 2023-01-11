@@ -1,128 +1,132 @@
 * {
-  margin: 0;
-  padding: 0;
-  /*ira medir a partir da borda assim nunca aumentando a borda da caixa   */
-  box-sizing: border-box;
-  font-family: "Roboto" "Roboto Mono", sans-serif;
+    margin: 0;
+    padding: 0;
+    /*ira medir a partir da borda assim nunca aumentando a borda da caixa   */
+    box-sizing: border-box;
+    font-family: "Roboto" "Roboto Mono", sans-serif;
 }
+
+body * {
+    color: var(--text-color);
+}
+
+:root {
+    --background-mode: url(./images/bg-mobile.jpg);
+    --text-color: #ffffff;
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --stroke-color-hover: rgba(255, 255, 255, 0.7)
+    --surface-color-hover: rgba(255, 255, 255, 0.05) ;
+}
+
+.light {
+    --background-mode: url(./images/bg-mobile-ligth.jpg);
+    --text-color: #000000;
+    --stroke-color:rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --stroke-color-hover: #000000;
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+}
+
 body {
-  background: #e5e5e5;
+    background-image: var(--background-mode);
+    background-repeat: no-repeat;
+    /* top =eixo Y center eixo = X (para alinhar aos pontos de interece da imagem dos eixos) */
+    background-position: top center;
+    background-size: cover;
+    /* cobrir tudo o campo de visao, se tivesse container seria do tamanho do body mas o body n tem tamanho definido ainda WH e Wh */
 }
+
 .container {
-  /* alinha o conteudo ao centro da caixa */
-  text-align: center;
-  width: 300px;
-  /* auto = o ele proprio faz o calculo das laterais centralizando o item no meio da tela (ignorando cima e baixo =0px) */
-  margin: 60px auto;
+    /* alinha o conteudo ao centro da caixa */
+    text-align: center;
+    width: 360px;
+    /* auto = o ele proprio faz o calculo das laterais centralizando o item no meio da tela (ignorando cima e baixo =0px) */
+    margin: 56px auto 0;
 }
 
-img {
-  /* será relativo a caixa q ela está, ou seja 100% da caixa */
-  width: 100%;
+#profile {
+    /* text-align: center; */
+    padding: 24px;
 }
 
-img.avatar {
-  padding: 4px;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  border: 4px #4263eb solid;
+#profile img.avatar {
+    display: inline-block;
+    padding: 4px;
+    border-radius: 50%;
+    width: 100px;
+    border: solid 2px var(--stroke-color);
 }
 
 h1 {
-  margin: 24px 0px 8px 0px;
-  color: #00082f;
-  font-size: 32px;
-  font-weight: 600;
-  font-family: "Roboto";
+    margin: 24px 0px 8px 0px;
+    line-height: 24px;
+    font-size: 32px;
+    font-weight: 600;
+    font-family: "Roboto";
 }
 
 span {
-  font-weight: 400;
-  font-family: "Roboto Mono";
-  color: rgba(0, 8, 47, 0.8);
-  font-size: 16px;
+    font-weight: 400;
+    font-family: "Roboto Mono";
+    font-size: 16px;
 }
 
 ul {
-  list-style: none;
-  margin: 48px 0;
+    list-style: none;
+    /* margin: 48px 0; */
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
-/* ul li {
-    margin: 20px;
-} */
+
+ul li {
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    padding: 16px 24px;
+    text-align: center;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    transition: background 0.5ms;
+
+
+}
+
+ul li:hover {
+    background:var(--surface-color-hover);
+    border: 1.5px solid var(--stroke-color-hover);
+
+}
+
 ul li a {
-  /* se fosse inline seria apenas uma linha e apenas do tamanho do conteudo, o flex permite que eu mexa com o conteudo dentro da caixa */
-  display: flex;
-  /* alinha ao centro eixoY*/
-  align-items: center;
-  /* justifica ao centro centralizando no eixtoX */
-  justify-content: center;
-  height: 53px;
-  background: #4263eb;
-  transition: background 400ms;
-  border-radius: 6px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    text-decoration: none;
 
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
+    text-transform: uppercase;
 
-  margin-bottom: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
 
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
+    font-family: "Roboto Mono";
+    font-weight: bold;
+    font-size: 14px;
+
 }
-
-ul li a:hover {
-  background: #364fc7;
-}
-
+/* 
 footer span {
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(0, 8, 47, 0.6);
-  transition: 400ms;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(0, 8, 47, 0.6);
+    transition: 400ms;
 }
 
 footer span:hover {
-  color: #00082f;
+    color: #00082f;
 }
-
 
 .icon {
     color: white;
-}
-
-
-button {
-  margin-top: -50px;
-  float: right;
-  margin-right: 10px;
-  padding: 10px;
-  text-decoration: none;
-  border: none;
-  font-size: 20px;
-  border-radius: 12px;
-  background: #4263eb;
-  color: white;
-}
-
-/* dark mode */
-
-body.dark {
-  background-color: #00082F;
-}
-
-body.dark h1 {
-  color: white;
-}
-
-
-body.dark span {
-  color: white;
-}
+} */
