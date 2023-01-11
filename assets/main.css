@@ -14,18 +14,20 @@ body * {
     --background-mode: url(./images/bg-mobile.jpg);
     --text-color: #ffffff;
     --stroke-color: rgba(255, 255, 255, 0.5);
-    --surface-color: rgba(255, 255, 255, 0.1);
-    --stroke-color-hover: rgba(255, 255, 255, 0.7)
-    --surface-color-hover: rgba(255, 255, 255, 0.05) ;
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --stroke-color-hover: rgb(255, 255, 255, 0.7);
+    --surface-color-hover: rgba(255, 255, 255, 0.199);
+    --switch-bg: url(./images/icons/moon.svg);
 }
 
 .light {
     --background-mode: url(./images/bg-mobile-ligth.jpg);
     --text-color: #000000;
-    --stroke-color:rgba(0, 0, 0, 0.5);
+    --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.05);
     --stroke-color-hover: #000000;
     --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --switch-bg: url(./images/icons/sun.svg);
 }
 
 body {
@@ -39,14 +41,13 @@ body {
 
 .container {
     /* alinha o conteudo ao centro da caixa */
-    text-align: center;
     width: 360px;
     /* auto = o ele proprio faz o calculo das laterais centralizando o item no meio da tela (ignorando cima e baixo =0px) */
-    margin: 56px auto 0;
+    margin: 50px auto 0;
 }
 
 #profile {
-    /* text-align: center; */
+    text-align: center;
     padding: 24px;
 }
 
@@ -77,6 +78,7 @@ ul {
     /* margin: 48px 0; */
     padding: 24px;
     display: flex;
+
     flex-direction: column;
     gap: 16px;
 }
@@ -89,40 +91,44 @@ ul li {
     border-radius: 8px;
     backdrop-filter: blur(4px);
     transition: background 0.5ms;
-
-
 }
 
 ul li:hover {
-    background:var(--surface-color-hover);
+    background: var(--surface-color-hover);
     border: 1.5px solid var(--stroke-color-hover);
-
 }
 
 ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
     font-weight: bold;
     text-decoration: none;
 
-    text-transform: uppercase;
-
-    text-decoration: none;
     text-transform: uppercase;
 
     font-family: "Roboto Mono";
     font-weight: bold;
     font-size: 14px;
-
 }
-/* 
-footer span {
+
+ion-icon {
+    font-size: 16px;
+}
+footer {
+    margin-top: px;
+    text-align: center;
+}
+/* footer span {
     font-family: "Roboto";
     font-weight: 400;
     font-size: 13px;
     font-weight: 500;
-    color: rgba(0, 8, 47, 0.6);
-    transition: 400ms;
-}
-
+    color: var(--text-color);
+} */
+/*
 footer span:hover {
     color: #00082f;
 }
@@ -130,3 +136,42 @@ footer span:hover {
 .icon {
     color: white;
 } */
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background: white;
+    border: 0;
+    border-radius: 50%;
+    background-image: var(--switch-bg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    transform:translateY(-50%) ;
+    top: 50%;
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 9999px;
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
+}

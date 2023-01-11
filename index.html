@@ -19,7 +19,6 @@
     </head>
 
     <body class="light">
-
         <div class="container">
             <div id="profile">
                 <img
@@ -32,6 +31,11 @@
                 <span style="display: block">@ashura_synxther</span>
             </div>
 
+            <div id="switch">
+                <button onclick="myFunction()"></button>
+                <span></span>
+            </div>
+
             <!--doubt:  instead of being a list of links, why not buttons?-->
             <ul>
                 <li>
@@ -39,7 +43,8 @@
                         href="http://instagram.com/ashura_synxther"
                         target="_blank"
                         rel="noopener noreferrer"
-                        >📷 Instagram</a
+                        ><ion-icon name="logo-instagram"></ion-icon>
+                        Instagram</a
                     >
                 </li>
 
@@ -48,7 +53,7 @@
                         href="https://github.com/synxther"
                         target="_blank"
                         rel="noopener noreferrer"
-                        >🐱 Github</a
+                        ><ion-icon name="logo-github"></ion-icon> Github</a
                     >
                 </li>
 
@@ -58,19 +63,19 @@
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        💻 Twitter</a
+                        <ion-icon name="logo-twitter"></ion-icon> Twitter</a
                     >
                 </li>
                 <li>
                     <a href="https://wa.me/558898213313" target="_blank"
-                        >📱 WhatsAapp
+                        ><ion-icon name="logo-whatsapp"></ion-icon> WhatsAapp
                     </a>
                 </li>
                 <li>
                     <a
                         href="https://www.linkedin.com/in/felipe-queiroz-6b9754240/"
                         target="_blank"
-                        >✍️ Linkedin
+                        ><ion-icon name="logo-linkedin"></ion-icon> Linkedin
                     </a>
                 </li>
             </ul>
@@ -81,5 +86,14 @@
         </div>
 
         <script src=".//assets/script.js"></script>
+
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
     </body>
 </html>
